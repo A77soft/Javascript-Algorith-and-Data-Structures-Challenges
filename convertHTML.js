@@ -1,3 +1,4 @@
+//1st Implementation
 function convertHTML(str) {
   let arr = str.split("");
   for (let i = 0; i < arr.length; i++) {
@@ -20,4 +21,14 @@ function convertHTML(str) {
     }
   }
   return arr.join("");
+}
+
+//2nd Implementation
+function convertHTMLTwo(str) {
+  return str
+        .replace(/&/g, "&amp;")
+        .replace(/\</g, "&lt;")
+        .replace(/\>/g, "&gt;")
+        .replace(/\"/g, "&quot;")
+        .replace(/\'/g, "&apos;");
 }
