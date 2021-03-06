@@ -15,18 +15,40 @@ function sumPrimesOne(num) {
     }
     return result;
   }
-  //2nd Method
-  function sumPrimesTwo(num) {
-      let result = [];
-      for (let i = 2; i <= num; i++) {
-          for (let j = 2; j <= i; j++) {
-              if (i === j) {
-                  result.push(i);
-              }
-              if (i % j === 0) {
-                  break;
-              }
-          }
+//2nd Method
+function sumPrimesTwo(num) {
+    let result = [];
+    for (let i = 2; i <= num; i++) {
+        for (let j = 2; j <= i; j++) {
+            if (i === j) {
+                result.push(i);
+            }
+            if (i % j === 0) {
+                break;
+            }
+        }
+    }
+    return result.reduce((a, b) => a + b);
+}
+
+//3rd Method
+function sumPrimesThree(num) {
+  let sum = 0;
+  function checkPrimeTwo(i) {
+    for (let k = 2; k < i; k++) {
+      if (i % k === 0) {
+        return false;
       }
-      return result.reduce((a, b) => a + b);
+    }
+    return true;
   }
+
+  for (let i = 2; i <= num; i++) {
+    if (checkPrime(i)) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+
+  
