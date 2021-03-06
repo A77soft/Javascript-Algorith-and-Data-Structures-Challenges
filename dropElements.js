@@ -7,7 +7,7 @@ function dropElements(arr, func) {
 }
 
 //2nd Implementation
-function dropElements(arr, func) {
+function dropElementsTwo(arr, func) {
  while (func(arr[0])===false){
   arr.splice(0, 1);
   }
