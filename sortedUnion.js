@@ -11,3 +11,18 @@ function sortedUnion(arr) {
   }
   return newArr;
 }
+
+function sortedUnion(arr) {
+  let args = Array.from(arguments);
+  let merged = [].concat.apply([], args);
+  let test = [];
+
+  return merged
+        .filter(value => {
+          if (test.indexOf(value) === -1) {
+            test.push(value);
+            return true;
+          }
+          return false;
+        });
+}
