@@ -1,4 +1,4 @@
-function whatIsInAName(collection, source) {
+function returnMatchingPairs(collection, source) {
   let srcKeys = Object.keys(source);
   
   return collection.filter(obj => {
