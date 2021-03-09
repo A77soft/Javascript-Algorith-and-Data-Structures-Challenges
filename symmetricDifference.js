@@ -22,3 +22,10 @@ function symmetricDifferenceTwo(arr1, arr2) {
   .concat(arr2)
   .filter(val => !arr1.includes(val) || !arr2.includes(val));
 }
+
+//3rd Method
+function symmetricDifferenceThree(arr1, arr2) {
+  let arr1filtered = arr1.filter(value => arr2.indexOf(value) === -1);
+  let arr2filtered = arr2.filter(value => arr1.indexOf(value) === -1); 
+  return arr1filtered.concat(arr2filtered);
+}
