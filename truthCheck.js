@@ -16,6 +16,5 @@ function truthCheck(collection, pre) {
         counter++;
       }
     }
-    return counter == collection.length;
+    return counter == collection.length; 
   }
-  
